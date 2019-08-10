@@ -1,0 +1,24 @@
+/* basic reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* root font size */
+html {
+  /* font-size: 10px; makes it easier to calculate rems down the line */
+  font-size: 62.5%; /* makes it easier to calculate rems down the line */
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+}
