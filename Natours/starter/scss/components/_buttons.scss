@@ -1,5 +1,4 @@
-.btn:link,
-.btn:visited {
+%btn-ext {
   font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -10,49 +9,56 @@
   position: relative;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgbfa(0, 0, 0, 0.2); /* offset x, offset y, blur */
-}
+.btn {
+  &:link,
+  &:visited {
+    @extend %btn-ext;
+  }
 
-.btn:active {
-  transform: translateY(-1px); /* relative to "resting state" */
-  box-shadow: 0 0.5rem 1rem rgbfa(0, 0, 0, 0.2); /* offset x, offset y, blur */
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgbfa($color-black, 0.2); /* offset x, offset y, blur */
 
-.btn::after {
-  /* must have content, even if is just a blank line */
-  content: "";
-  /* also must have a display property? here we use the same display type as actual element */
-  display: inline-block;
-  /* height and width are relative to actual element */
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  /* position exacly behind the actual element */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  &:active {
+    transform: translateY(-1px); /* relative to "resting state" */
+    box-shadow: 0 0.5rem 1rem rgbfa($color-black, 0.2); /* offset x, offset y, blur */
+  }
 
-.btn--white {
-  background-color: white;
-  color: $color-grey-dark;
-}
+  &::after {
+    /* must have content, even if is just a blank line */
+    content: "";
+    /* also must have a display property? here we use the same display type as actual element */
+    display: inline-block;
+    /* height and width are relative to actual element */
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* position exacly behind the actual element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
 
-.btn--white::after {
-  background-color: white;
-  /* color: #777; */
-}
+  &--white {
+    background-color: white;
+    color: $color-grey-dark;
 
-.btn--animated {
-  animation: moveInBottom 0.5s ease-in 0.75s;
-  animation-fill-mode: backwards;
+    &::after {
+      background-color: white;
+      /* color: #777; */
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-in 0.75s;
+    animation-fill-mode: backwards;
+  }
 }

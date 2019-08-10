@@ -11,7 +11,7 @@ npm install
 Then, to start a development environment that will auto-compile _Sass_ and auto reload page, run:
 
 ```bash
-npm run dev
+npm start
 ```
 
 ## Notes
