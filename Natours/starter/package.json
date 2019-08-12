@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "browserslist": ["defaults"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel serve index.html --open ",
+    "start": "parcel serve index.html",
     "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "parcel": "^1.12.3",
     "sass": "^1.22.9"
   }
