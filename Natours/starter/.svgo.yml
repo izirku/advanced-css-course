@@ -15,45 +15,45 @@ plugins:
   #     param1: 1
   #     param2: 2
 
-  - removeDoctype
-  - removeXMLProcInst
-  - removeComments
-  - removeMetadata
+  - removeDoctype: true
+  - removeXMLProcInst: true
+  - removeComments: true
+  - removeMetadata: true
   - removeXMLNS
-  - removeEditorsNSData
-  - cleanupAttrs
-  - inlineStyles
-  - minifyStyles
-  - convertStyleToAttrs
+  - removeEditorsNSData: true
+  - cleanupAttrs: true
+  - inlineStyles: true
+  - minifyStyles: true
+  - convertStyleToAttrs: true
   - cleanupIDs: true
   - prefixIds
   - removeRasterImages
-  - removeUselessDefs
+  - removeUselessDefs: true
   - cleanupNumericValues: true
   - cleanupListOfValues
   - convertColors
-  - removeUnknownsAndDefaults
+  - removeUnknownsAndDefaults: true
   - removeNonInheritableGroupAttrs
-  - removeUselessStrokeAndFill
+  - removeUselessStrokeAndFill: true
   - removeViewBox
   - cleanupEnableBackground
-  - removeHiddenElems
-  - removeEmptyText
+  - removeHiddenElems: true
+  - removeEmptyText: true
   - convertShapeToPath: true
   - convertEllipseToCircle
-  - moveElemsAttrsToGroup
-  - moveGroupAttrsToElems
-  - collapseGroups
-  - convertPathData
-  - convertTransform
-  - removeEmptyAttrs
-  - removeEmptyContainers
+  - moveElemsAttrsToGroup: true
+  - moveGroupAttrsToElems: true
+  - collapseGroups: true
+  - convertPathData: true
+  - convertTransform: true
+  - removeEmptyAttrs: true
+  - removeEmptyContainers: true
   - mergePaths: true
-  - removeUnusedNS
+  - removeUnusedNS: true
   - sortAttrs
   - sortDefsChildren
   - removeTitle: true
-  - removeDesc
+  - removeDesc: true
   - removeDimensions: true
   - removeAttrs:
       attrs: "(stroke|fill)"
