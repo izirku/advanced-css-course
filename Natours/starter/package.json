@@ -1,13 +1,18 @@
 {
-  "name": "starter",
+  "name": "natours",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "browserslist": ["defaults"],
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "svg:optimize": "svgo --multipass --config=.svgo.yml -p 2 -f svg/input -o svg/output",
+    "svg:optimize-old": "svgo --multipass --pretty --config=.svgo.yaml --enable=removeUselessStrokeAndFill,removeDimensions,removeTitle,removeStyleElement,cleanupIDs,cleanupNumericValues,mergePaths,convertShapeToPath -p 2 -f svg/input -o svg/output",
+    "svg:gen-sprites": "svgstore -p icon- -o svg/sprites.svg svg/output/*.svg"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +20,8 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "parcel": "^1.12.3",
-    "sass": "^1.22.9"
+    "sass": "^1.22.9",
+    "svgo": "^1.3.0",
+    "svgstore-cli": "^1.3.1"
   }
 }

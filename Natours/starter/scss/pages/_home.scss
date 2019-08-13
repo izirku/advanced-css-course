@@ -15,15 +15,22 @@
     margin: 0 10rem;
     // flex-direction: row;
     // margin: auto auto;
+  }
+}
 
-    &--text {
-      background-color: orangered;
-      flex: 1 1 30rem;
-    }
+.card {
+  // background-color: orangered;
+  flex: 1;
+  padding: 3rem;
+  // flex: 1 1 30rem;
+}
 
-    &--images {
-      background-color: yellowgreen;
-      // flex: 1 0 30rem;
-    }
+.section-features {
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+    // stroke-width: 0;
+    stroke: $color-primary;
+    fill: none;
   }
 }

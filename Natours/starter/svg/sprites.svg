@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><symbol id="icon-compass" viewBox="0 0 64 64">
+    <circle cx="32" cy="35" r="28.29"/>
+    <path d="M37 40l8-19-19 8-7 18zM26 29l11 11m-.1-33a5 5 0 10-9.8 0M32 7v5m0 46v5m28-28h-5M9 35H4"/>
+</symbol><symbol id="icon-heart" viewBox="0 0 64 64">
+    <path d="M1 21c0 20 31 38 31 38s31-18 31-38c0-8.29-6-16-15-16-8.29 0-16 5.71-16 14 0-8.29-7.71-14-16-14C7 5 1 12.71 1 21z"/>
+</symbol><symbol id="icon-map" viewBox="0 0 64 64">
+    <path d="M1 59l21-8 20 8 21-8V5l-21 8-20-8-21 8zM22 5v46m20-38v46"/>
+</symbol><symbol id="icon-world" viewBox="0 0 64 64">
+    <path d="M32 .89a31.11 31.11 0 110 62.22A31.11 31.11 0 0132 .89zM32 1v62m31-31H1"/>
+    <path d="M30 1S16 12 16 32s14 31 14 31m4-62s14 11 14 31-14 31-14 31"/>
+    <path d="M8 12s5 10 24 10 24-10 24-10M8 52s5-10 24-10 24 10 24 10"/>
+</symbol></svg>

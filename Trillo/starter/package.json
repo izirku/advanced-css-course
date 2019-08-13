@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Landing page for natours",
   "main": "index.js",
+  "browserslist": [
+    "default"
+  ],
   "scripts": {
     "start": "parcel serve index.html",
     "build": "parcel build index.html"
