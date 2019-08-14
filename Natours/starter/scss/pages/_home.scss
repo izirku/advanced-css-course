@@ -18,19 +18,91 @@
   }
 }
 
-.card {
-  // background-color: orangered;
-  flex: 1;
-  padding: 3rem;
-  // flex: 1 1 30rem;
-}
+// .card {
+//   // background-color: orangered;
+//   flex: 1;
+//   padding: 3rem;
+//   // flex: 1 1 30rem;
+// }
 
 .section-features {
+  margin-top: -10rem;
+  padding: 20rem 0;
+
+  transform: skewY(-7deg);
+  // all direct children:
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+
+  &__icon-box {
+    margin: 2rem 0;
+  }
+
   &__icon {
-    height: 4rem;
-    width: 4rem;
+    height: 6rem;
+    width: 6rem;
     // stroke-width: 0;
     stroke: $color-primary;
+    // fill: url(#header-shape-gradient), #fff;
+    // fill: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+    stroke-width: 2px;
     fill: none;
+  }
+  #header-shape-gradient {
+    --color-stop: #f12c06;
+    --color-bot: #faed34;
+  }
+
+  &__card-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card {
+    flex: 0 0 18%;
+    font-size: 1.5rem;
+
+    padding: 2.5rem;
+    border-radius: 3px;
+
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.04);
+    }
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+    background-color: rgba($color-white, 0.8);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.section-tours {
+  background-color: $color-grey-light-1;
+  margin-top: -9rem;
+  padding: 20rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__card-container {
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
   }
 }
