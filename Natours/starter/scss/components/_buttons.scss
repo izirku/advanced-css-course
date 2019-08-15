@@ -32,7 +32,7 @@
 
   &::after {
     /* must have content, even if is just a blank line */
-    content: "";
+    content: '';
     /* also must have a display property? here we use the same display type as actual element */
     display: inline-block;
     /* height and width are relative to actual element */
@@ -53,6 +53,16 @@
 
     &::after {
       background-color: white;
+      /* color: #777; */
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
       /* color: #777; */
     }
   }
