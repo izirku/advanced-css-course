@@ -116,3 +116,36 @@
 
   padding: 15rem 0;
 }
+
+.section-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  // background-color: yellowgreen;
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: cover; // same as 100%
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  height: 50rem;
+  width: 107rem;
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
+}
