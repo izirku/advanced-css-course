@@ -7,9 +7,14 @@
   border-radius: 10rem;
   transition: all 0.2s; /* affects transforms on hover & active */
   position: relative;
+
+  // change for the <button> els:
+  border: none;
+  cursor: pointer;
 }
 
 .btn {
+  &,
   &:link,
   &:visited {
     @extend %btn-ext;
@@ -25,7 +30,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px); /* relative to "resting state" */
     box-shadow: 0 0.5rem 1rem rgbfa($color-black, 0.2); /* offset x, offset y, blur */
   }
