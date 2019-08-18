@@ -19,7 +19,8 @@
   // make sure that if screen is smaller than 600px (phones have DPI2 usually)
   // we are loading smaller image still and not this one:
   // may depend on browserslist... // is autoprefixer taking care of this one?: // (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
-  @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 2000px) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 600px),
+    only screen and (min-width: 2000px) {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.8),
