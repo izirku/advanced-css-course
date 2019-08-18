@@ -6,9 +6,14 @@
   padding: 6rem 6rem 6rem 9rem;
   transform: skewX(-12deg);
 
-  //   & > * {
-  //     transform: skewX(12deg);
-  //   }
+  @include respond(tab-port) {
+    width: 90%;
+    padding: 4rem 4rem 4rem 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
 
   &__shape {
     position: relative;
@@ -21,24 +26,29 @@
     //    the one in & > * {} selector
     transform: skewX(12deg) translateX(-3rem);
 
-    // background-color: yellowgreen;
     clip-path: circle(50% at 50% 50%);
 
     // el must have width x height & must be floated
     shape-outside: circle(50% at 50% 50%);
+
+    @include respond(phone) {
+      transform: skewX(0) translateX(-3rem);
+    }
   }
 
   &__image {
     height: 100%;
-    // width: 100%;
     transform: translateX(-4rem) scale(1.4);
-    // transform: scale(1.4);
     transition: all 0.2s;
     backface-visibility: hidden;
   }
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {

@@ -9,7 +9,11 @@
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* clock-wise */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* clock-wise */
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 87vh);
+  }
 
   &__logo-box {
     position: absolute;

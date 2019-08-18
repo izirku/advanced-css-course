@@ -2,11 +2,7 @@
   // FUNCTIONALITY
   position: relative;
   perspective: 150rem;
-  flex: 0 0 22%;
-
-  &:not(:last-child) {
-    margin-right: 7rem;
-  }
+  flex: 0 0 30%;
 
   // when child elements are positioned absolute, they are taken out of
   // the document normal flow, and parent's heigh colapses.
@@ -30,7 +26,6 @@
 
     backface-visibility: hidden;
 
-    // width: 20rem;
     background-color: $color-white;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     transition: all 0.8s ease;
@@ -39,7 +34,6 @@
     }
 
     &--back {
-      //   background-color: olivedrab;
       // back card in its initial position is already
       // 180deg rotated - is "on the flip side"
       transform: rotateY(-180deg);
@@ -68,16 +62,17 @@
       }
     }
   }
+
   &:hover &__side--front {
     transform: rotateY(180deg);
-    // transform: translateY(-1.5rem);
   }
   &:hover &__side--back {
     transform: rotateY(0);
-    // transform: translateY(-1.5rem);
   }
 
+  // /////////////////////////////////////////////////////////////////////////
   // FRONT SIDE STYLING
+  // /////////////////////////////////////////////////////////////////////////
   &__picture {
     height: 23rem;
     background-size: cover;
@@ -167,7 +162,9 @@
     }
   }
 
+  // /////////////////////////////////////////////////////////////////////////
   // BACK SIDE STYLING
+  // /////////////////////////////////////////////////////////////////////////
   &__cta {
     // center by element's center:
     @include absolute-center;
@@ -189,5 +186,65 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  // /////////////////////////////////////////////////////////////////////////
+  // TABLET MEDIA QUERY
+  // /////////////////////////////////////////////////////////////////////////
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    background-color: $color-white;
+
+    &__side {
+      position: relative;
+      height: auto;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // BACK SIDE STYLING
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
+  }
+
+  // /////////////////////////////////////////////////////////////////////////
+  // PHONE MEDIA QUERY
+  // /////////////////////////////////////////////////////////////////////////
+  @include respond(phone) {
+    // FUNCTIONALITY
+    flex: none;
+    width: 70%;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
   }
 }

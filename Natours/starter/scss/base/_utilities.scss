@@ -12,10 +12,18 @@
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
+
+  @include respond(phone) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .u-margin-bottom-large {
   margin-bottom: 8rem !important;
+
+  @include respond(phone) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-top-large {
@@ -34,6 +42,6 @@
   padding: 3rem !important;
 }
 
-.u-flex-1 {
-  flex: 1 !important;
-}
+// .u-flex-1 {
+//   flex: 1 !important;
+// }

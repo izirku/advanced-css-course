@@ -17,6 +17,16 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__background {
@@ -33,6 +43,16 @@
       $color-primary-light,
       $color-primary-dark
     );
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 4rem;
+      right: 4rem;
+    }
   }
 
   &__nav {
@@ -42,7 +62,8 @@
     z-index: 1500;
     height: 100vh;
     opacity: 0;
-    width: 0;
+    width: 100%;
+    visibility: hidden;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
@@ -99,6 +120,7 @@
     // transform: scale(80);
     width: 100%;
     opacity: 1;
+    visibility: visible;
   }
 
   // ICON
