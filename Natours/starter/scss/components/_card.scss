@@ -12,6 +12,48 @@
   // the absolutely positioned child:
   height: 52rem;
 
+  &__cue {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(tab-port) {
+      visibility: hidden;
+    }
+  }
+
+  &__cue-icon {
+    height: 3rem;
+    width: 3rem;
+    stroke-width: 1px;
+    &--1 {
+      fill: $color-secondary-light;
+      stroke: $color-secondary-light;
+    }
+    &--2 {
+      fill: $color-primary-light;
+      stroke: $color-primary-light;
+    }
+    &--3 {
+      fill: $color-tertiary-light;
+      stroke: $color-tertiary-light;
+    }
+
+    &--1-back {
+      fill: $color-secondary-dark;
+      stroke: $color-secondary-dark;
+    }
+    &--2-back {
+      fill: $color-primary-dark;
+      stroke: $color-primary-dark;
+    }
+    &--3-back {
+      fill: $color-tertiary-dark;
+      stroke: $color-tertiary-dark;
+    }
+  }
+
   &__side {
     position: absolute;
     top: 0;
@@ -30,8 +72,8 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     transition: all 0.8s ease;
 
-    &--front {
-    }
+    // &--front {
+    // }
 
     &--back {
       // back card in its initial position is already

@@ -20,16 +20,21 @@
     height: 15rem;
     width: 15rem;
     float: left;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) {
+      border-radius: none;
+      clip-path: circle(50% at 50% 50%);
+
+      // el must have width x height & must be floated
+      shape-outside: circle(50% at 50% 50%);
+    }
 
     // 1. best way to move floated element is just to translate it
     // 2. we have to skewX backwards here as this transform would override
     //    the one in & > * {} selector
     transform: skewX(12deg) translateX(-3rem);
-
-    clip-path: circle(50% at 50% 50%);
-
-    // el must have width x height & must be floated
-    shape-outside: circle(50% at 50% 50%);
 
     @include respond(phone) {
       transform: skewX(0) translateX(-3rem);
