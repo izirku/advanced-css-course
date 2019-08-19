@@ -72,4 +72,53 @@ order of writing media query:
       @content;
     }
   }
+
+  // apple retina is 192dpi
+  // make sure that if screen is smaller than 600px (phones have DPI2 usually)
+  // we are loading smaller image still and not this one:
+  // may depend on browserslist... // is autoprefixer taking care of this one?: // (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
+  @if $breakpoint == hi-res {
+    @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
+      only screen and (min-width: 2000px) {
+      @content;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// RESPONSIVE IMAGES
+@mixin background-image($img, $img-sm, $img-webp, $img-webp-sm) {
+  background-image: url($img-sm);
+
+  .webp & {
+    background-image: url($img-webp-sm);
+  }
+
+  @include respond(hi-res) {
+    background-image: url($img);
+  }
+
+  .webp & {
+    @include respond(hi-res) {
+      background-image: url($img-webp);
+    }
+  }
+}
+
+@mixin background-image-grad($img, $img-sm, $img-webp, $img-webp-sm, $grad) {
+  background-image: $grad, url($img-sm);
+
+  .webp & {
+    background-image: $grad, url($img-webp-sm);
+  }
+
+  @include respond(hi-res) {
+    background-image: $grad, url($img);
+  }
+
+  .webp & {
+    @include respond(hi-res) {
+      background-image: $grad, url($img-webp);
+    }
+  }
 }

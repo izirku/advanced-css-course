@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10rem 0;
+  padding: 10rem 4rem;
   font-size: 1.4rem;
   color: $color-grey-light-1;
 
@@ -16,12 +16,16 @@
   &__content {
     align-self: stretch;
     display: flex;
-    justify-content: space-evenly;
+    // does not work in Edge
+    // justify-content: space-evenly;
+    justify-content: space-between;
 
-    @include respond(tab-port) {
-      flex-direction: column;
-      align-items: center;
-    }
+    flex-direction: column;
+    align-items: center;
+    // @include respond(tab-port) {
+    //   flex-direction: column;
+    //   align-items: center;
+    // }
   }
 
   &__logo-box {
@@ -38,8 +42,9 @@
   }
 
   &__navigation {
+    // flex: 1 1 50%;
     border-top: 1px solid $color-grey-dark;
-    padding-top: 2rem;
+    padding: 2rem 0;
   }
 
   &__list {
@@ -73,9 +78,10 @@
   }
 
   &__copyright {
+    // flex: 1 1 50%;
     // width: 35%;
-    border-top: 1px solid $color-grey-dark;
-    padding-top: 2rem;
+    // border-top: 1px solid $color-grey-dark;
+    // padding-top: 2rem;
     text-align: center;
 
     @include respond(tab-port) {

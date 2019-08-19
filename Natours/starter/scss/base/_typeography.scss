@@ -38,11 +38,12 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
 
-    /* short-hand */
     animation: moveInRight 1s ease-out;
-    /* animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-in; */
+    // short-hand for:
+    //
+    // animation-name: moveInRight;
+    // animation-duration: 1s;
+    // animation-timing-function: ease-in;
 
     @include respond(phone) {
       letter-spacing: 0.5rem;
@@ -53,11 +54,21 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   font-weight: 700;
+  color: $color-primary;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
-  color: $color-primary;
   transition: all 0.2s;
+
+  .backgroundcliptext & {
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    background-clip: text;
+    color: transparent;
+  }
 
   @include respond(tab-port) {
     font-size: 3rem;
@@ -68,47 +79,10 @@ body {
   }
 
   &:hover {
-    // transform: skewY(2deg) skewX(15deg);
     transform: skew(15deg, 2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
 }
-
-// Safari produces artifacts.... while using background-clip
-// .heading-secondary {
-//   font-size: 3.5rem;
-//   font-weight: 700;
-//   text-transform: uppercase;
-//   letter-spacing: 2px;
-//   display: inline-block;
-//   background-image: linear-gradient(
-//     to right,
-//     $color-primary-light,
-//     $color-primary-dark
-//   );
-//   background-clip: text;
-//   color: transparent;
-//   transition: all 0.2s;
-
-//   @include respond(tab-port) {
-//     font-size: 3rem;
-//   }
-
-//   @include respond(phone) {
-//     font-size: 2rem;
-//   }
-
-//   &:hover {
-//     // transform: skewY(2deg) skewX(15deg);
-//     transform: skew(15deg, 2deg) scale(1.1);
-//     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-//   }
-// }
-
-// not working...
-// .heading-secondary[data-useragent*='Safari'] {
-//   background-image: none !important;
-// }
 
 .heading-tertiary {
   font-size: $font-size-default;

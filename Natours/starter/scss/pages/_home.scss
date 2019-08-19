@@ -165,7 +165,9 @@
   &__card-container {
     display: flex;
     align-self: stretch;
-    justify-content: space-evenly;
+    // does not work in Edge
+    // justify-content: space-evenly;
+    justify-content: space-around;
 
     @include respond(phone) {
       flex-direction: column;
@@ -186,44 +188,15 @@
     padding: 7rem 0;
   }
 
-  background-image: linear-gradient(
-      to right,
-      rgba($color-white, 0.8),
-      rgba($color-white, 0.8)
-    ),
-    url(../img/nat-12-small.jpg);
+  @include background-image-grad(
+    '../img/nat-11.jpg',
+    '../img/nat-12-small.jpg',
+    '../img/nat-11.webp',
+    '../img/nat-12-small.webp',
+    $gradient-white-alpha-heavy
+  );
 
-  .webp & {
-    background-image: linear-gradient(
-        to right,
-        rgba($color-white, 0.8),
-        rgba($color-white, 0.8)
-      ),
-      url(../img/nat-12-small.webp);
-  }
-
-  @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
-    only screen and (min-width: 2000px) {
-    background-image: linear-gradient(
-        to right,
-        rgba($color-white, 0.8),
-        rgba($color-white, 0.8)
-      ),
-      url(../img/nat-11.jpg);
-  }
-
-  .webp & {
-    @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
-      only screen and (min-width: 2000px) {
-      background-image: linear-gradient(
-          to right,
-          rgba($color-white, 0.8),
-          rgba($color-white, 0.8)
-        ),
-        url(../img/nat-11.webp);
-    }
-  }
-
+  background-size: cover;
   background-position: center center;
 }
 

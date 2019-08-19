@@ -58,7 +58,9 @@
   }
 
   &__right {
-    flex: 1;
+    flex: 1 1 0px;
+    // same as:
+    // flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,10 +79,20 @@
     background-size: cover;
     background-position: center center;
     &--1 {
-      background-image: url(../img/nat-8.jpg);
+      @include background-image(
+        '../img/nat-8.jpg',
+        '../img/nat-8-small.jpg',
+        '../img/nat-8.webp',
+        '../img/nat-8-small.webp'
+      );
     }
     &--2 {
-      background-image: url(../img/nat-9.jpg);
+      @include background-image(
+        '../img/nat-9.jpg',
+        '../img/nat-9-small.jpg',
+        '../img/nat-9.webp',
+        '../img/nat-9-small.webp'
+      );
     }
   }
 

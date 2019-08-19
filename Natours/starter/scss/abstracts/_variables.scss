@@ -17,6 +17,51 @@ $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 $color-black: #000;
 
+// GRADIENTS
+$gradient-primary: linear-gradient(
+  to right bottom,
+  $color-primary-light,
+  $color-primary-dark
+);
+
+$gradient-secondary: linear-gradient(
+  to right bottom,
+  $color-secondary-light,
+  $color-secondary-dark
+);
+
+$gradient-tertiary: linear-gradient(
+  to right bottom,
+  $color-tertiary-light,
+  $color-tertiary-dark
+);
+
+$alpha-heavy: 0.8;
+
+$gradient-white-alpha-heavy: linear-gradient(
+  to right,
+  rgba($color-white, $alpha-heavy),
+  rgba($color-white, $alpha-heavy)
+);
+
+$gradient-primary-alpha-heavy: linear-gradient(
+  to right bottom,
+  rgba($color-primary-light, $alpha-heavy),
+  rgba($color-primary-dark, $alpha-heavy)
+);
+
+$gradient-secondary-alpha-heavy: linear-gradient(
+  to right bottom,
+  rgba($color-secondary-light, $alpha-heavy),
+  rgba($color-secondary-dark, $alpha-heavy)
+);
+
+$gradient-tertiary-alpha-heavy: linear-gradient(
+  to right bottom,
+  rgba($color-tertiary-light, $alpha-heavy),
+  rgba($color-tertiary-dark, $alpha-heavy)
+);
+
 // FONT SIZES
 $font-size-default: 1.6rem;
 
