@@ -32,6 +32,10 @@
 
 .u-margin-top-huge {
   margin-top: 10rem !important;
+
+  @include respond(phone) {
+    margin-top: 7rem !important;
+  }
 }
 
 .u-padding-small {

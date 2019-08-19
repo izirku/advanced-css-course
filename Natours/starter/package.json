@@ -11,13 +11,18 @@
     "start": "parcel serve index.html",
     "build": "parcel build --no-content-hash --no-source-maps --public-url \"cv/project-1\" index.html",
     "svg:optimize": "svgo --multipass --config=.svgo.yml -p 2 -f svg/input -o svg/output",
-    "svg:gen": "svgstore -p icon- -o svg/sprites.svg svg/output/*.svg"
+    "svg:gen": "svgstore -p icon- -o svg/sprites.svg svg/output/*.svg",
+    "imagemin": "node tools/imagemin.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "imagemin": "^7.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-webp": "^5.1.0",
     "parcel": "^1.12.3",
     "prettier": "^1.18.2",
     "sass": "^1.22.9",

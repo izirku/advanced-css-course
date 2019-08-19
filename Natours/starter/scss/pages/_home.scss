@@ -54,7 +54,39 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/nat-4.jpg);
+    url(../img/nat-4-small.jpg);
+
+  .webp & {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-4-small.webp);
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
+    only screen and (min-width: 2000px) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-4.jpg);
+  }
+
+  .webp & {
+    @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
+      only screen and (min-width: 2000px) {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-primary-light, 0.8),
+          rgba($color-primary-dark, 0.8)
+        ),
+        url(../img/nat-4.webp);
+    }
+  }
+
   background-size: cover;
 
   &__icon-box {
@@ -150,6 +182,49 @@
   justify-content: center;
 
   padding: 15rem 0;
+  @include respond(phone) {
+    padding: 7rem 0;
+  }
+
+  background-image: linear-gradient(
+      to right,
+      rgba($color-white, 0.8),
+      rgba($color-white, 0.8)
+    ),
+    url(../img/nat-12-small.jpg);
+
+  .webp & {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.8),
+        rgba($color-white, 0.8)
+      ),
+      url(../img/nat-12-small.webp);
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
+    only screen and (min-width: 2000px) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.8),
+        rgba($color-white, 0.8)
+      ),
+      url(../img/nat-11.jpg);
+  }
+
+  .webp & {
+    @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
+      only screen and (min-width: 2000px) {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-white, 0.8),
+          rgba($color-white, 0.8)
+        ),
+        url(../img/nat-11.webp);
+    }
+  }
+
+  background-position: center center;
 }
 
 .section-book {
@@ -174,6 +249,17 @@
       transparent 50%
     ),
     url(../img/nat-10.jpg);
+
+  .webp & {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 50%,
+        transparent 50%
+      ),
+      url(../img/nat-10.webp);
+  }
+
   background-size: cover; // same as 100%
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
@@ -188,6 +274,18 @@
       url(../img/nat-10.jpg);
   }
 
+  .webp & {
+    @include respond(tab-land) {
+      background-image: linear-gradient(
+          105deg,
+          rgba($color-white, 0.9) 0%,
+          rgba($color-white, 0.9) 65%,
+          transparent 65%
+        ),
+        url(../img/nat-10.webp);
+    }
+  }
+
   @include respond(tab-port) {
     background-image: linear-gradient(
         to right,
@@ -195,6 +293,37 @@
         rgba($color-white, 0.9) 100%
       ),
       url(../img/nat-10.jpg);
+  }
+
+  .webp & {
+    @include respond(tab-port) {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-white, 0.9) 0%,
+          rgba($color-white, 0.9) 100%
+        ),
+        url(../img/nat-10.webp);
+    }
+  }
+
+  @include respond(phone) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/nat-10-small.jpg);
+  }
+
+  .webp & {
+    @include respond(phone) {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-white, 0.9) 0%,
+          rgba($color-white, 0.9) 100%
+        ),
+        url(../img/nat-10-small.webp);
+    }
   }
 
   &__form {

@@ -7,6 +7,16 @@
       rgba($color-primary-dark, 0.8)
     ),
     url(../img/hero-small.jpg);
+
+  .webp & {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero-small.webp);
+  }
+
   background-size: cover;
   background-position: top;
 
@@ -19,7 +29,7 @@
   // make sure that if screen is smaller than 600px (phones have DPI2 usually)
   // we are loading smaller image still and not this one:
   // may depend on browserslist... // is autoprefixer taking care of this one?: // (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
-  @media only screen and (min-resolution: 192dpi) and (min-width: 600px),
+  @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
     only screen and (min-width: 2000px) {
     background-image: linear-gradient(
         to right bottom,
@@ -27,6 +37,18 @@
         rgba($color-primary-dark, 0.8)
       ),
       url(../img/hero.jpg);
+  }
+
+  .webp & {
+    @media only screen and (min-resolution: 192dpi) and (min-width: 601px),
+      only screen and (min-width: 2000px) {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.8),
+          rgba($color-primary-dark, 0.8)
+        ),
+        url(../img/hero.webp);
+    }
   }
 
   @include respond(phone) {
