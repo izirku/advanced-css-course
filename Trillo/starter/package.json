@@ -4,7 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "browserslist": [
-    "default"
+    "defaults"
   ],
   "scripts": {
     "start": "parcel serve index.html",
@@ -13,7 +13,8 @@
   "author": "Jonas",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "parcel": "^1.12.3",
-    "sass": "^1.22.9"
+    "sass": "^1.22.10"
   }
 }

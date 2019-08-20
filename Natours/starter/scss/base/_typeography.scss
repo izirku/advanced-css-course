@@ -60,15 +60,26 @@ body {
   display: inline-block;
   transition: all 0.2s;
 
-  .backgroundcliptext & {
-    background-image: linear-gradient(
-      to right,
-      $color-primary-light,
-      $color-primary-dark
-    );
-    background-clip: text;
-    color: transparent;
-  }
+  // SAFARI FAILS
+  // .backgroundcliptext & {
+  //   background-image: linear-gradient(
+  //     to right,
+  //     $color-primary-light,
+  //     $color-primary-dark
+  //   );
+  //   background-clip: text;
+  //   color: transparent;
+  // }
+
+  // @supports (background-clip: text) {
+  //   background-image: linear-gradient(
+  //     to right,
+  //     $color-primary-light,
+  //     $color-primary-dark
+  //   );
+  //   background-clip: text;
+  //   color: transparent;
+  // }
 
   @include respond(tab-port) {
     font-size: 3rem;
