@@ -17,8 +17,9 @@ const closePopup = function(e) {
   // console.log(e.target)
   if (!popupContent.isSameNode(e.target) && !popupContent.contains(e.target)) {
     // window.history.back()
-    window.history.replaceState({ foo: 'bar' }, '', '/')
-    window.history.go()
+    // window.history.replaceState({ foo: 'bar' }, '', '/')
+    // window.history.go()
+    window.location = '#section-tours'
   }
 }
 
