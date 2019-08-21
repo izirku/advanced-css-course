@@ -7,14 +7,25 @@
     "defaults"
   ],
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build --no-content-hash --no-source-maps --public-url \"cv/project-2\" index.html",
+    "svg:optimize": "svgo --multipass --config=.svgo.yml -p 2 -f svg/input -o svg/output",
+    "svg:gen": "svgstore -p icon- -o svg/sprites.svg svg/output/*.svg",
+    "imagemin": "node tools/imagemin.js"
   },
   "author": "Jonas",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "imagemin": "^7.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-webp": "^5.1.0",
     "parcel": "^1.12.3",
-    "sass": "^1.22.10"
+    "prettier": "^1.18.2",
+    "sass": "^1.22.10",
+    "svgo": "^1.3.0",
+    "svgstore-cli": "^1.3.1"
   }
 }
