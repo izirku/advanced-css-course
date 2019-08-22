@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve index.html",
-    "build": "parcel build --no-content-hash --no-source-maps --public-url \"cv/project-2\" index.html",
+    "build": "parcel build --no-content-hash --no-source-maps index.html",
     "svg:optimize": "svgo --multipass --config=.svgo.yml -p 2 -f svg/input -o svg/output",
     "svg:gen": "svgstore -p icon- -o svg/sprites.svg svg/output/*.svg",
     "imagemin": "node tools/imagemin.js"

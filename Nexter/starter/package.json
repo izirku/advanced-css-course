@@ -18,7 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "acorn": "^7.0.0",
-    "autoprefixer": "^7.2.6",
+    "autoprefixer": "^9.6.1",
     "concat": "^1.0.3",
     "eslint": "^6.2.1",
     "imagemin": "^7.0.0",
